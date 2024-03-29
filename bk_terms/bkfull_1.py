@@ -3,7 +3,7 @@ import numpy as np
 
 #1st order terms
 class WA1:
-    def l1(params,r=0,s=0):
+    def l1(params,mu,phi,r=0,s=0):
         k1,k2,k3,theta,Pk1,Pk2,Pk3,Pkd1,Pkd2,Pkd3,Pkdd1,Pkdd2,Pkdd3,d,K,C,f,D1,b1,b2,g2 = params
         st = np.sin(theta)
         ct= np.cos(theta)

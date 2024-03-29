@@ -1,8 +1,6 @@
 import numpy as np
 
-
-
-class Mix:
+class WARR:
     def l0(params,derivs,r=0,s=0):
         k1,k2,k3,theta,Pk1,Pk2,Pk3,Pkd1,Pkd2,Pkd3,Pkdd1,Pkdd2,Pkdd3,d,K,C,f,D1,b1,b2,g2 = params
         fd,Dd,gd2,bd2,bd1,fdd,Ddd,gdd2,bdd2,bdd1 = derivs
