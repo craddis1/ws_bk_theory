@@ -1,5 +1,7 @@
 # WS_bk
-Contains routines as well as computed terms for the wide separation and relativistic corrections to the bispectrum
+Contains routines as well as computed terms for the wide separation and relativistic corrections to the bispectrum - see ... for full details.
+
+Wide angle, Radial redhsift and relativistic terms up to second order in each.
 
 ## mathematica_routines
 
