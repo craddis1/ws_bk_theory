@@ -9,8 +9,18 @@ The_bispectrum.nb (+plus auxilliary files) allows for the computation of wide se
 
 Outputs are stored from mathematica in .json files in mathematica_expr
 
-## python format
+Terms for other kernels can also be provided or computed from the The_bispectrum.nb - format can also be flexible.
+
+## python functions
 
 Outputs are converted to python format and stored in bk_terms
 
-For an example notebook for using these expressions see example.py
+For an example notebook for using these expressions see example.ipynb
+
+'''
+class WA1:
+    def l1(params,r=0,s=0):
+        k1,k2,k3,theta,Pk1,Pk2,Pk3,Pkd1,Pkd2,Pkd3,Pkdd1,Pkdd2,Pkdd3,d,K,C,f,D1,b1,b2,g2 = params
+        ...
+'''
+Where
