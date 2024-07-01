@@ -10,7 +10,7 @@ To get started see example.ipynb for a quick guide on using the computed express
 
 ## mathematica_routines
 
-The_bispectrum.nb (+plus bkfuncsandrules) allows for the computation of wide separation terms for some given Fourier kernels (defined in kernels.nb). 2nd order wide-separation effects can be slow to compute due to huge number of terms involved.
+The_bispectrum.nb allows for the computation of wide separation terms for some given Fourier kernels (defined in kernels.nb). 2nd order wide-separation effects can be slow to compute due to huge number of terms involved.
 
 - kernels.nb: Defines 1st and 2nd order kernels
 
@@ -21,9 +21,7 @@ The_bispectrum.nb (+plus bkfuncsandrules) allows for the computation of wide sep
 - The_bispectrum.nb: Main file used in computation exports terms into .json files
 
 
-
-Outputs are stored from mathematica in .json files in mathematica_expr
-Also read_mathematica.ipynb can be used for converting from mathematica to python formatting.
+Outputs are stored from mathematica in .json files in mathematica_expr - also read_mathematica.ipynb can be used for converting from mathematica to python formatting.
 
 Terms for other kernels can also be provided or computed from the The_bispectrum.nb - format can also be flexible.
 
@@ -35,10 +33,14 @@ For an example notebook for using these expressions see example.ipynb
 
 bk_SNR.ipynb includes code to compute and plot the SNR and fisher stuff for multipoles
 
-bk_plots.ipynb is messy but includes plots used in ...
+bk_plots.ipynb contains a bunch of functions that maybe be useful but is not clean
 
+
+## Errors
+
+Some syntax has been updated so there will be several errors lying around - particular in the bigger notebooks
 
 ## Contact
 
 See paper - 
-If youre having any problems or have any ideas to make it better-  Feel free to get in conact :) - c.l.j.addis~qmul.ac.uk
+If youre having any problems or have any ideas to make it better-  Feel free to get in contact :) - c.l.j.addis@qmul.ac.uk

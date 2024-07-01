@@ -1,6 +1,6 @@
 import numpy as np
 
-class GR0PNG:
+class PNG:
     def l0(params,paramsPNG):
         k1,k2,k3,theta,Pk1,Pk2,Pk3,Pkd1,Pkd2,Pkd3,Pkdd1,Pkdd2,Pkdd3,d,K,C,f,D1,b1,b2,g2 = params
         fNL,bE01,bE11,bE02,alphak1,alphak2,alphak3 = paramsPNG

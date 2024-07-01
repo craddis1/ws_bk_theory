@@ -1,4 +1,5 @@
 import numpy as np
+import scipy
 from scipy.interpolate import interp1d
 from scipy.integrate import odeint
 
@@ -23,11 +24,16 @@ class SurveyParams():
                 'be_survey':lambda xx: -7.29 + 0.470*xx + 1.17*xx**2 - 0.290*xx**3,#euclid_data[:,2]
                 'Q_survey': lambda xx: 0.583 + 2.02*xx - 0.568*xx**2 + 0.0411*xx**3,
                 'n_g': lambda zz: 0.0193*zz**(-0.0282) *np.exp(-2.81*zz)}
-
-
-        BGS =  {'b_1':  lambda xx: 1.34/self.D_intp(xx),
+        
+        #just need D(z)
+        baLCDM = cosmo.get_background()
+        D_cl = baLCDM['gr.fac. D']
+        z_cl = baLCDM['z']
+        D_intp = interp1d(z_cl,D_cl,kind='cubic')
+        
+        BGS =  {'b_1':  lambda xx: 1.34/D_intp(xx),
                 'f_sky': 15000/41253,
-                'z_survey': np.linspace(0.9,1.8),
+                'z_survey': np.linspace(0.05,0.6),
                 'be_survey':lambda xx:  -2.25 - 4.02*xx + 0.318*xx**2 - 14.6*xx**3,
                 'Q_survey': lambda xx: 0.282 + 2.36*xx + 2.27*xx**2 + 11.1*xx**3,
                 'n_g':  lambda zz: 0.023*zz**(-0.471)*np.exp(-5.17*zz)-0.002} #fitting from Maartens
@@ -72,7 +78,11 @@ class CosmologicalFunctions:
         """
         self.cosmo = cosmo
         baLCDM = cosmo.get_background()
-
+        
+        D_cl = baLCDM['gr.fac. D']
+        z_cl = baLCDM['z']
+        self.D_intp = interp1d(z_cl,D_cl,kind='cubic')
+        
         f_cl = baLCDM['gr.fac. f']
         D_cl = baLCDM['gr.fac. D']
         z_cl = baLCDM['z']
