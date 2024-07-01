@@ -29,11 +29,16 @@ Terms for other kernels can also be provided or computed from the The_bispectrum
 
 Outputs are converted to python format and stored in bk_terms
 
+
+### Notebooks
+
 For an example notebook for using these expressions see example.ipynb
 
 bk_SNR.ipynb includes code to compute and plot the SNR and fisher stuff for multipoles
 
 bk_plots.ipynb contains a bunch of functions that maybe be useful but is not clean
+
+In these notebooks everything is designed to use WS_cosmo.py where cosmology and survey biases are defined and from that object all bispectrum terms can be computed.
 
 
 ## Errors
